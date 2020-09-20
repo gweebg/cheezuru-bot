@@ -1,3 +1,5 @@
+# HEROKU DEPLOYABLE VERSION 20/09/2020 #
+
 # Libraries used #
 
 from bs4 import BeautifulSoup
