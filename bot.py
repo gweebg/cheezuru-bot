@@ -11,8 +11,9 @@ import os
 from os import environ
 from threading import Thread
 
-ep_num = 10             #MAKE ENVIRONMENTAL VARIABLE
-chapter_num = 155       #MAKE ENVIRONMENTAL VARIABLE
+ep_num = environ['ep_num']            
+chapter_num = environ['chapter_num']    
+ep_limit = 12
 ANIME_LOOP = 0
 MANGA_LOOP = 0
 
@@ -119,7 +120,7 @@ def request_manga():
         
     r.close() 
     MANGA_LOOP += 1 
-    print("anime looped {} time(s)".format(MANGA_LOOP))
+    print("manga looped {} time(s)".format(MANGA_LOOP))
         
 # Tweeting function #
 
@@ -149,8 +150,17 @@ def send_tweet(tweet):
 
 def run_thread():
 
-    Thread(target = request_anime).start()
-    Thread(target = request_manga).start()
+    global ep_limit
+
+    if ep_num == str(ep_limit):
+
+        Thread(target = request_manga).start()
+
+    else:
+
+        Thread(target = request_manga).start()
+        Thread(target = request_anime).start()
+
 
 # Shedule when to run # 
 
