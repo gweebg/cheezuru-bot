@@ -54,7 +54,7 @@ def request_anime():
                 if str(ep_num) in name_raw:
 
                     debug_msg("episode {} has released".format(ep_num))
-                    send_tweet("Episode {} of Kanojo Okarishimasu has released!\n Go watch it:\n {}!".format(ep_num,watch_url))
+                    send_tweet("Episode {} of Kanojo Okarishimasu has released!\nGo watch it:\n {}!".format(ep_num,watch_url))
                     ep_num += 1
                     debug_msg("looking for {}".format(ep_num))
 
@@ -88,6 +88,7 @@ def request_manga():
     mydivs = soup.find_all('div', {'class':'row no-gutters'})
     title = "Black Cat Scanlations"
     global chapter_num
+    keywrd = "Ch. "+(str(chapter_num))
     global MANGA_LOOP
         
     for div in mydivs:
@@ -100,10 +101,10 @@ def request_manga():
                
             if title in chap_name:
 
-                if str(chapter_num) in chap_name:
+                if keywrd in chap_name:
 
                     debug_msg("chapter {} has released".format(chapter_num))
-                    send_tweet("Chapter {} of Kanojo Okarishimasu has released!\n Go read it in:\n {}!".format(chapter_num,url))
+                    send_tweet("Chapter {} of Kanojo Okarishimasu has released!\nGo read it in:\n {}!".format(chapter_num,url))
                     chapter_num += 1
                     debug_msg("looking for chapter {}".format(chapter_num))
 
