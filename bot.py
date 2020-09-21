@@ -11,9 +11,9 @@ import os
 from os import environ
 from threading import Thread
 
-ep_num = environ['ep_num']            
-chapter_num = environ['chapter_num']    
-ep_limit = 12
+ep_num = 12           
+chapter_num = 157    
+ep_limit = 13
 ANIME_LOOP = 0
 MANGA_LOOP = 0
 
@@ -152,7 +152,7 @@ def run_thread():
 
     global ep_limit
 
-    if ep_num == str(ep_limit):
+    if ep_num == ep_limit:
 
         Thread(target = request_manga).start()
 
