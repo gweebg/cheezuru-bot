@@ -1,6 +1,6 @@
 # CHEEZURU-BOT 
 
-*guya-4koma* is a python script that automates the process of tweeting whenever a new chapter of Kaguya Sama 4koma is released.
+*cheezuru-bot* is a python script that automates the process of tweeting whenever a new chapter of Kanojo Okarishiamasu is released.
 
 ## Installation
 
