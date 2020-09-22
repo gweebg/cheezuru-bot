@@ -12,7 +12,7 @@ from os import environ
 from threading import Thread
 
 ep_num = 12           
-chapter_num = 157    
+chapter_num = 158    
 ep_limit = 13
 ANIME_LOOP = 0
 MANGA_LOOP = 0
@@ -54,7 +54,7 @@ def request_anime():
                 if str(ep_num) in name_raw:
 
                     debug_msg("episode {} has released".format(ep_num))
-                    send_tweet("Episode {} of Kanojo Okarishimasu has released!\nGo watch it:\n {}!".format(ep_num,watch_url))
+                    send_tweet("Episode {} of Kanojo Okarishimasu has released!\nGo watch it:\n {}".format(ep_num,watch_url))
                     ep_num += 1
                     debug_msg("looking for {}".format(ep_num))
 
@@ -104,7 +104,7 @@ def request_manga():
                 if keywrd in chap_name:
 
                     debug_msg("chapter {} has released".format(chapter_num))
-                    send_tweet("Chapter {} of Kanojo Okarishimasu has released!\nGo read it in:\n {}!".format(chapter_num,url))
+                    send_tweet("Chapter {} of Kanojo Okarishimasu has released!\nGo read it in:\n {}".format(chapter_num,url))
                     chapter_num += 1
                     debug_msg("looking for chapter {}".format(chapter_num))
 
