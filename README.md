@@ -41,7 +41,7 @@ I recommend hosting on either a dedicated computer (Raspberry Pi) or on Heroku t
 # credentials.py
 
 ACCESS_TOKEN = ""
-ACCESS_TOKEN_SECRET = ""        # Add guya.moe twitter credentials here, never share this. #
+ACCESS_TOKEN_SECRET = ""        # Add your twitter credentials here, never share this. #
 CONSUMER_KEY = ""               # These are essential for the tweeting part. #
 CONSUMER_SECRET = ""
 
