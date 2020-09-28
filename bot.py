@@ -11,7 +11,7 @@ import os
 from os import environ
 from threading import Thread
 
-ep_num = 12           
+ep_num = 13          
 chapter_num = 158    
 ep_limit = 13
 ANIME_LOOP = 0
